@@ -1,0 +1,21 @@
+pipeline{
+ agent none
+ 
+    stages{
+	  stage('point-01'){
+	     agent {label 'Master'}
+		   steps{
+		     sh 'touch file.txt'
+			 }
+			 }
+	  stage('point-02'){
+         agent {label 'Java'}
+           steps{
+             sh 'mkdir dir01'
+			   }
+			   }
+			   
+	  }		 
+	
+	
+	}
