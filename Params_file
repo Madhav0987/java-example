@@ -1,0 +1,17 @@
+pipeline{
+ agent any
+   parameters {
+      string (name:'USER_ID')}
+	   stages{
+	     stage('checkout'){
+            environment{
+			  name='Artisentek'
+			}		 
+              steps{
+			     echo "running the job by $name and" 
+				 
+				 echo "triggerd by:: ${params.USER_ID}"		  
+			  }
+		 }
+	   }
+   }
