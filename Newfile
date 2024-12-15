@@ -1,5 +1,5 @@
 pipeline{
- agent (label 'Java')
+ agent (label 'Master')
  
     stages{
 	  stage('point-01'){
